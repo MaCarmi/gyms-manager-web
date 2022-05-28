@@ -1,0 +1,85 @@
+<mat-card class="gym-card">
+  <mat-card-title-group>
+    <mat-card-title>
+      {{gym.name | uppercase}}
+    </mat-card-title>
+    <button mat-icon-button matTooltip="Delete" (click)="deleteGym()">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </mat-card-title-group>
+  <mat-card-content>
+    <div class="row">
+      <div class="col">
+        <mat-label>
+          Website
+        </mat-label>
+      </div>
+      <div class="col">
+        <mat-label>
+          {{gym.website}}
+        </mat-label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <mat-label>
+          Address
+        </mat-label>
+      </div>
+      <div class="col">
+        <mat-label>
+          {{gym.address}}
+        </mat-label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <mat-label>
+          Construction Year
+        </mat-label>
+      </div>
+      <div class="col">
+        <mat-label>
+          {{gym.constructionYear}}
+        </mat-label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <mat-label>
+          Phone
+        </mat-label>
+      </div>
+      <div class="col">
+        <mat-label>
+          {{gym.phone}}
+        </mat-label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <mat-label>
+          Description
+        </mat-label>
+      </div>
+      <div class="col">
+        <mat-label>
+          {{gym.description}}
+        </mat-label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <mat-label>
+          Email
+        </mat-label>
+      </div>
+      <div class="col">
+        <mat-label>
+          {{gym.email}}
+        </mat-label>
+      </div>
+    </div>
+  </mat-card-content>
+
+</mat-card>

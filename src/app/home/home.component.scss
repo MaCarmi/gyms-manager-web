@@ -1,0 +1,35 @@
+.example-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.main-div {
+  overflow-y: auto;
+  min-height: calc(100vh - 60px);
+}
+
+.toolbar {
+  height: 60px;
+}
+
+
+.mat-sidenav {
+  width: 15%;
+}
+
+a.menu-link {
+  font-size: 20px !important;
+  font-weight: bold !important;
+}
+
+mat-icon.menu-icon {
+  transform: scale(1.5);
+}
+
+
+mat-list-item.menu-list {
+  background-color: #80808073;
+}

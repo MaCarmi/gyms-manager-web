@@ -1,0 +1,15 @@
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <ng-container *ngIf="!newGymInEdit">
+      <ng-container *ngFor="let gym of gymList">
+        <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-4">
+          <app-gym-card [gym]="gym"(onDeleteGym)="deleteGym(gym)"></app-gym-card>
+        </div>
+      </ng-container>
+    </ng-container>
+    <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-4">
+      <app-add-gym-card [isEdit]="newGymInEdit" [gym]="newGym" (onAddGym)="addGym()" (onCreatedGym)="createGym()"
+      (onDiscard)="discardNewGym()"></app-add-gym-card>
+    </div>
+  </div>
+</div>

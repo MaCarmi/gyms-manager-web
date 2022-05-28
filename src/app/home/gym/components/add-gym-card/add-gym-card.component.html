@@ -1,0 +1,69 @@
+<mat-card class="gym-card" [ngClass]="{'b-dashed': !isEdit}">
+  <mat-card-title-group>
+    <mat-card-title>
+      Add Gym
+    </mat-card-title>
+    <button *ngIf="isEdit" mat-icon-button matTooltip="Delete" (click)="discard()">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </mat-card-title-group>
+  <ng-container *ngIf="!isEdit; else newGym">
+    <mat-card-content class="mat-card-content-plus">
+      <button mat-icon-button matTooltip="Add new Gym" (click)="addGym()">
+        <mat-icon class="add-gym-icon">add</mat-icon>
+      </button>
+    </mat-card-content>
+  </ng-container>
+  <ng-template #newGym>
+    <mat-card-content>
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>
+          Name
+        </mat-label>
+        <input type="text" matInput [(ngModel)]="gym.name" id="name" required>
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>
+          Website
+        </mat-label>
+        <input type="text" matInput [(ngModel)]="gym.website" id="website">
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>
+          Address
+        </mat-label>
+        <input type="text" matInput [(ngModel)]="gym.address" id="address">
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>
+          Construction Year
+        </mat-label>
+        <input type="number" matInput [(ngModel)]="gym.constructionYear" id="constructionYear">
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>
+          Phone
+        </mat-label>
+        <input type="phone" matInput [(ngModel)]="gym.phone" id="phone">
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>
+          Description
+        </mat-label>
+        <input type="text" matInput [(ngModel)]="gym.description" id="description">
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>
+          Email
+        </mat-label>
+        <input type="email" matInput [(ngModel)]="gym.email" id="email">
+      </mat-form-field>
+      <div class="row justify-content-center">
+        <div class="col" matTooltip="{{!isFormFilled()? 'Fill all mandatory fields':''}}">
+          <button (click)="createGym()" class="save-button" mat-flat-button color="primary"
+            [disabled]="!isFormFilled()">Save</button>
+        </div>
+      </div>
+    </mat-card-content>
+  </ng-template>
+</mat-card>

@@ -23,7 +23,6 @@ describe('AppComponent', () => {
   it(`should have as title 'gyms-manager-web'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('gyms-manager-web');
   });
 
   it('should render title', () => {

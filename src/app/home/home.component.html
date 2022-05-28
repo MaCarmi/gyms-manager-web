@@ -1,0 +1,22 @@
+<div class="example-container">
+  <mat-toolbar color="primary" class="toolbar">
+    <button mat-icon-button (click)="snav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <h1 class="example-app-name">Gyms manager</h1>
+  </mat-toolbar>
+  <mat-sidenav-container autosize>
+    <mat-sidenav #snav opened mode="side" opened="true" class="mat-sidenav">
+      <mat-nav-list>
+        <mat-list-item class="menu-list">
+          <mat-icon mat-list-icon class="menu-icon">fitness_center</mat-icon>
+          <a mat-line routerLink="gym-list" mat-line class="menu-link">Gym list</a>
+        </mat-list-item>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content class="main-div">
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
+
