@@ -26,7 +26,7 @@ export class GymComponent implements OnInit {
     this.gymService.delete(gym.id).
       pipe(
         take(1),
-        switchMap((res: string) => this.getGyms())
+        switchMap((res: any) => this.getGyms())
       ).subscribe();
   }
 
@@ -39,7 +39,7 @@ export class GymComponent implements OnInit {
   }
 
   public setNextAvailableId() {
-    return Math.max(...this.gymList.map(gym => gym.id)) + 1;
+    return this.gymList.length === 0? 0: Math.max(...this.gymList.map(gym => gym.id)) + 1
   }
 
   public createGym() {

@@ -25,3 +25,10 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Descrizione applicazione
+
+Questa applicazione ha lo scopo di gestire una lista di palestre, definite con il modello https://github.com/simeraro1/gyms-manager-web/blob/ebee16cc8c7f0ab649c926d54eadb75e25a732d9/src/app/shared/models/gym.model.ts, l'applicazione si appoggia su di un server back-end che espone delle REST API per effettuare delle operazioni CRUD su tale entità.
+L'applicazione fa largo uso della libreria Angular Material, (vedi docs ufficiale), attualmente è composta di un'unica vista chiamata "gyms.component.ts" dove vengono listate tutte le palestre restituite dalla chiamata GET dedicata, in più viene visualizzato un BOX che permette l'inserimento di una nuova palestra. 
+La funzionalità di DELETE è già implementata e usufruibile tramite l'apposita icona "trash" presente su ogni card "palestra".
+Per maggiori dettagli leggere i commenti nel codice sorgente.

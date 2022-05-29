@@ -1,9 +1,19 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 import { ApiList } from '../enums/api-list.enum';
 import { Gym } from '../models/gym.model';
 import { HttpService } from './http.service';
 
+/**
+ * Questo service si occuopa nello specifico di effettuare operazioni CRUD sull'entità gym,
+ * vedi: https://github.com/simeraro1/gyms-manager-web/blob/ebee16cc8c7f0ab649c926d54eadb75e25a732d9/src/app/shared/models/gym.model.ts
+ *
+ * Nel costruttore di questo service viene iniettato il servizio HttpService<Gym>,
+ * vedi: https://github.com/simeraro1/gyms-manager-web/blob/ebee16cc8c7f0ab649c926d54eadb75e25a732d9/src/app/shared/services/http.service.ts
+ *
+ * @export
+ * @class GymService
+ */
 @Injectable({
   providedIn: 'root'
 })

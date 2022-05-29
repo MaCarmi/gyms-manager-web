@@ -5,7 +5,8 @@ import { HomeComponent } from './home.component';
 const routes: Routes = [
   {
     path: '', component: HomeComponent, children: [
-      { path: 'gym-list', loadChildren: () => import('./gym/gym.module').then(m => m.GymModule) },
+      { path: '', redirectTo: 'gym-list', pathMatch: 'full' },
+      { path: 'gym-list', loadChildren: () => import('./gym/gym.module').then(m => m.GymModule) }
     ]
   },
 ];
