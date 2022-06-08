@@ -18,37 +18,37 @@
     <mat-card-content>
       <mat-form-field class="example-full-width" appearance="outline">
         <mat-label>
-          Name
+          Nome
         </mat-label>
         <input type="text" matInput [(ngModel)]="gym.name" id="name" required>
       </mat-form-field>
       <mat-form-field class="example-full-width" appearance="outline">
         <mat-label>
-          Website
+          Sito web
         </mat-label>
         <input type="text" matInput [(ngModel)]="gym.website" id="website">
       </mat-form-field>
       <mat-form-field class="example-full-width" appearance="outline">
         <mat-label>
-          Address
+          Indirizzo 
         </mat-label>
         <input type="text" matInput [(ngModel)]="gym.address" id="address">
       </mat-form-field>
       <mat-form-field class="example-full-width" appearance="outline">
         <mat-label>
-          Construction Year
+          Anno Costruzione
         </mat-label>
         <input type="number" matInput [(ngModel)]="gym.constructionYear" id="constructionYear">
       </mat-form-field>
       <mat-form-field class="example-full-width" appearance="outline">
         <mat-label>
-          Phone
-        </mat-label>
+          Telefono
+        </mat-label>  
         <input type="phone" matInput [(ngModel)]="gym.phone" id="phone">
       </mat-form-field>
       <mat-form-field class="example-full-width" appearance="outline">
         <mat-label>
-          Description
+          Descrizione
         </mat-label>
         <input type="text" matInput [(ngModel)]="gym.description" id="description">
       </mat-form-field>
@@ -57,6 +57,12 @@
           Email
         </mat-label>
         <input type="email" matInput [(ngModel)]="gym.email" id="email">
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>
+          Opinione
+        </mat-label>
+        <input type="opinione" matInput [(ngModel)]="gym.opinione" id="opinione">
       </mat-form-field>
       <div class="row justify-content-center">
         <div class="col" matTooltip="{{!isFormFilled()? 'Fill all mandatory fields':''}}">

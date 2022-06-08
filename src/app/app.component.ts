@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Gym } from './shared/models/gym.model';
+import { Mng } from './shared/models/mng.model';
 import { GymService } from './shared/services/gym.service';
 
 @Component({

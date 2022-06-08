@@ -1,0 +1,60 @@
+<mat-card class="mng-card" [ngClass]="{'b-dashed': !isEdit}">
+    <mat-card-title-group>
+      <mat-card-title>
+        Add Manager
+      </mat-card-title>
+      <button *ngIf="isEdit" mat-icon-button matTooltip="Delete" (click)="discard()">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </mat-card-title-group>
+    <ng-container *ngIf="!isEdit; else newMng">
+      <mat-card-content class="mat-card-content-plus">
+        <button mat-icon-button matTooltip="Add new Mng" (click)="addMng()">
+          <mat-icon class="add-mng-icon">add</mat-icon>
+        </button>
+      </mat-card-content>
+    </ng-container>
+    <ng-template #newMng>
+      <mat-card-content>
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>
+            Nome
+          </mat-label>
+          <input type="text" matInput [(ngModel)]="mng.name" id="name" required>
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>
+            Cognome
+          </mat-label>
+          <input type="text" matInput [(ngModel)]="mng.surname" id="website">
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>
+            Codice fiscale
+          </mat-label>
+          <input type="text" matInput [(ngModel)]="mng.fiscal_code" id="address">
+        </mat-form-field>
+        
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>
+            Telefono
+          </mat-label>  
+          <input type="phone" matInput [(ngModel)]="mng.phone" id="phone">
+        </mat-form-field>
+        
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>
+            Email
+          </mat-label>
+          <input type="email" matInput [(ngModel)]="mng.email" id="email">
+        </mat-form-field>
+          <div class="row justify-content-center">
+          <div class="col" matTooltip="{{!isFormFilled()? 'Fill all mandatory fields':''}}">
+            <button (click)="createMng()" class="save-button" mat-flat-button color="primary"
+              [disabled]="!isFormFilled()">Save</button>
+          </div>
+        </div>
+      </mat-card-content>
+    </ng-template>
+  </mat-card>
+  

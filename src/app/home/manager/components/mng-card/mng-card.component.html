@@ -1,0 +1,62 @@
+<mat-card class="mng-card">
+    <mat-card-title-group>
+      <mat-card-title>
+        {{mng.name | uppercase}}
+      </mat-card-title>
+      <button mat-icon-button matTooltip="Delete" (click)="deleteMng()">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </mat-card-title-group>
+    <mat-card-content>
+      <div class="row">
+        <div class="col">
+          <mat-label>
+            Cognome
+          </mat-label>
+        </div>
+        <div class="col">
+          <mat-label>
+            {{mng.surname}}
+          </mat-label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-label>
+            Codice Fiscale
+          </mat-label>
+        </div>
+        <div class="col">
+          <mat-label>
+            {{mng.fiscal_code}}
+          </mat-label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-label>
+            Telefono
+          </mat-label>
+        </div>
+        <div class="col">
+          <mat-label>
+            {{mng.phone}}
+          </mat-label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-label>
+            Email
+          </mat-label>
+        </div>
+        <div class="col">
+          <mat-label>
+            {{mng.email}}
+          </mat-label>
+        </div>
+      </div>
+    </mat-card-content>
+  
+</mat-card>
+  

@@ -13,5 +13,14 @@ export enum ApiList {
   GET_GYM_BY_ID='/api/gym/{id}',
   UPDATE_GYM='/api/gym/{id}',
   DELETE_GYM='/api/gym/{id}',
-  GET_GYMS='/api/gyms'
+  GET_GYMS='/api/gyms',
+  CREATE_MNG='/api/mng',
+    GET_MNG_BY_ID='/api/mng/{id}',
+    UPDATE_MNG='/api/mng/{id}',
+    DELETE_MNG='/api/mng/{id}',
+    GET_MNG='/api/mngs'
 }
+
+
+
+

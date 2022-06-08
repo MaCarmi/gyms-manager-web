@@ -1,0 +1,16 @@
+<div class="container-fluid">
+    <div class="row justify-content-center">
+      <ng-container *ngIf="!newMngInEdit">
+        <ng-container *ngFor="let mng of mngList">
+          <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-4">
+            <app-mng-card [mng]="mng"(onDeleteMng)="deleteMng(mng)"></app-mng-card>
+          </div>
+        </ng-container>
+      </ng-container>
+      <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-4">
+        <app-add-mng-card [isEdit]="newMngInEdit" [mng]="newMng" (onAddMng)="addMng()" (onCreatedMng)="createMng()"
+        (onDiscard)="discardNewMng()"></app-add-mng-card>
+      </div>
+    </div>
+  </div>
+  

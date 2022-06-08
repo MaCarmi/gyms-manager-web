@@ -8,10 +8,19 @@
   <mat-sidenav-container autosize>
     <mat-sidenav #snav opened mode="side" opened="true" class="mat-sidenav">
       <mat-nav-list>
+        
         <mat-list-item class="menu-list">
           <mat-icon mat-list-icon class="menu-icon">fitness_center</mat-icon>
           <a mat-line routerLink="gym-list" mat-line class="menu-link">Gym list</a>
         </mat-list-item>
+        
+        <mat-list-item class="menu-list">
+          <mat-icon mat-list-icon class="menu-icon">supervisor_account</mat-icon>
+          <a mat-line routerLink="mng-list" mat-line class="menu-link" >Manager list</a>
+        </mat-list-item>
+        
+        
+     
       </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content class="main-div">

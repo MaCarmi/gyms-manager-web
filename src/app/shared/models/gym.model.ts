@@ -7,4 +7,5 @@ export interface Gym {
   description: string;
   id: number;
   email: string;
+  opinione: string;
 }
